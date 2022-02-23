@@ -1,48 +1,46 @@
-<!doctype html>
-<html>
-<head>
-  <title>Game</title>
-  <link rel="stylesheet" href="/static/madlibs.css">
-</head>
-<body>
-    <h1>Game</h1>
-    <form action="/madlib">
-        <div>
-        Type in a person: <input type="text" name="person">
-        </div><br>
+{% extends 'base.html' %}
 
-        <div>
-        Choose your favorite color:
-        <select name="color">
-            <option value="red">Red</option>
-            <option value="yellow">Yellow</option>
-            <option value="ruby">Ruby</option>
-            <option value="green">Green</option>
-        </select>
-        </div>
 
-        <div>
-        Type in a noun here: <input type="text" name="noun">
-        </div>
+{% block title %}Game{% endblock %}
+ 
+{% block content %}
+  <h2>Game</h2>
+  <form action="/madlib">
+      <div>
+      Type in a person: <input type="text" name="person">
+      </div>
 
-        <div>
-        Choose an adjective you like:
-        </div>
-        <div>
-        <input type="radio" name="adj" value="funny" id="funny">
-        <label for="funny">Funny</label>
-    
-        <input type="radio" name="adj" value="boring" id="boring">
-        <label for="boring">Boring</label>
+      <div>
+      Choose your favorite color:
+      <select name="color">
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="ruby">Ruby</option>
+          <option value="green">Green</option>
+      </select>
+      </div>
 
-        <input type="radio" name="adj" value="silly" id="silly">
-        <label for="silly">Silly</label>
+      <div>
+      Type in a noun here: <input type="text" name="noun">
+      </div>
 
-        <input type="radio" name="adj" value="cute" id ="cute">
-        <label for = "cute"> Cute </label>
-        </div>
+      <div>
+      Choose an adjective you like:
+      </div>
+      <div>
+      <input type="radio" name="adj" value="funny" id="funny">
+      <label for="funny">Funny</label>
+  
+      <input type="radio" name="adj" value="boring" id="boring">
+      <label for="boring">Boring</label>
 
-        <input type="submit">
-      </form>
-</body>
-</html>
+      <input type="radio" name="adj" value="silly" id="silly">
+      <label for="silly">Silly</label>
+
+      <input type="radio" name="adj" value="cute" id ="cute">
+      <label for = "cute"> Cute </label>
+      </div>
+
+      <input type="submit">
+    </form>
+{% endblock %} 
